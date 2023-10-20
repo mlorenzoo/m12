@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Create</title>
+   <style>
+      body{
+         background-color: aquamarine;
+      }
+
+      label {
+         display: block;
+         text-align: start;
+      }
+
+      input {
+         display: block;
+         padding: 5px;
+         margin-bottom: 10px;
+      }
+
+   </style>
+</head>
+<body>
+   <h1>Create</h1>
+   <form method="POST" enctype="multipart/form-data">
+      <label>Titulo:</label>
+      <input name="titulo" required maxlength="255"></input>
+
+      <label>descripcion:</label>
+      <input name="desc" required></input>
+
+      <label for="imagen">Foto:</label>
+      <input type="file" name="imagen" id="imagen" accept="image/*"></input>
+
+      <label>Precio:</label>
+      <input type="number" name="precio" requierd></input>
+
+      <input type="submit" value="Enviar"><a href="{{ url_for('hello') }}"></a></input>
+      <button><a href="{{ url_for('hello') }}">Home</a></button>
+   </form>
+</body>
+</html>
